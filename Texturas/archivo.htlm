@@ -6,7 +6,7 @@
    content="text/html; charset=UTF-8">
   </head>
   <body>
-    <script scr="https://github.com/saavedra017/saavedra017.github.io/tree/master/Texturas">
+    <script scr="three_lib.js">
     </script scr="archivo.js"></script>
   </body>
 </html>
