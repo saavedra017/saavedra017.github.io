@@ -30,3 +30,6 @@ function loop(){
   requestAnimationFrame(loop);
 }
 var cubo1, cubo2, escena, camara, renderer;
+
+setup();
+loop();
