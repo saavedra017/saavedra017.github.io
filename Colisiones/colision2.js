@@ -8,7 +8,7 @@ function setup(){
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 5;
 
-  raycaster = new THREE.RayCaster();
+  raycaster = new THREE.Raycaster();
   raycaster.setFromCamera(new THREE.Vector2(0,0), camara);
 
   escena = new THREE.Scene();
