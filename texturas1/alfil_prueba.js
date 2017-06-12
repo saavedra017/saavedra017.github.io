@@ -1,4 +1,4 @@
-var loader = new THREE.TextureLoader();
+/*var loader = new THREE.TextureLoader();
 
 loader.load(
 	'https://saavedra017.github.io/texturas1/MN.jpg',  
@@ -11,8 +11,10 @@ loader.load(
 
 	// función cuando la descarga falla
 	function ( xhr ) { var material = new THREE.MeshNormalMaterial(); console.log('fallo la descarga'); }
-	);   
-
+	);   */
+THREE.ImageUtils.crossOrigin='';
+var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MN.jpg');
+var material = new THREE.MeshBasicMaterial({map:textura});
 
 var puntos = [];
 
