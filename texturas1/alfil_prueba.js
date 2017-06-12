@@ -14,14 +14,14 @@ loader.load(
 	);   */
 
 THREE.ImageUtils.crossOrigin='';
-var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MN.jpg');
+var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MPN.jpg');
 var material = new THREE.MeshBasicMaterial({map:textura});
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 200;
 
 var base = new THREE.Mesh( new THREE.BoxGeometry(20, 0.1, 20), 
-			   new THREE. MeshLambertMaterial({color: 0xFFFFFF}) );
+			   new THREE. MeshBasicMaterial({color: 0xFFFFFF}) );
 base.position.y=0;
 base.rotateX( Math.PI/6 );
 
