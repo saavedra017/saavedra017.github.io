@@ -15,7 +15,7 @@ loader.load(
 
 THREE.ImageUtils.crossOrigin='';
 var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MPN.jpg');
-var material = new THREE.MeshLamberMaterial({map:textura});
+var material = new THREE.MeshLambertMaterial({map:textura});
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 50;
