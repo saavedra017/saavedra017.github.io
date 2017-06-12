@@ -15,7 +15,7 @@ do{
 	function ( xhr ) { b_textura = 0; console.log('fallo la descarga'); }
 	); 
 } 
-	while(b_textura === 1 );
+	while(b_textura === 0 );
 
 var forma = new THREE.BoxGeometry(1,1,1);
 malla = new THREE.Mesh(forma, material);
