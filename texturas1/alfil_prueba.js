@@ -9,7 +9,7 @@ iluminacion.position.z = 25;
 
 var base = new THREE.Mesh( new THREE.BoxGeometry(20, 0.1, 20), 
 			   new THREE. MeshLambertMaterial({color: 0xFFFFFF}) );
-base.position.y=-1;
+base.position.y=-5;
 base.rotateX( Math.PI/6 );
 
 
