@@ -1,18 +1,4 @@
-/*var loader = new THREE.TextureLoader();
-
-loader.load(
-	'https://saavedra017.github.io/texturas1/MN.jpg',  
-
-	// función cuando la textura está cargada
-	function( texture ) { var  material = new THREE.MeshBasicMaterial( { map: texture } ); },
-
-	// función cuando la descarga de a textura está en progreso
-	function ( xhr ){ console.log( (xhr.loaded/xhr.total * 100) + '% cargado' ); },
-
-	// función cuando la descarga falla
-	function ( xhr ) { var material = new THREE.MeshNormalMaterial(); console.log('fallo la descarga'); }
-	);   */
-
+function setup(){
 THREE.ImageUtils.crossOrigin='';
 var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MPB.jpg');
 var material = new THREE.MeshBasicMaterial({map:textura});
@@ -73,4 +59,13 @@ base. receiveShadow = true;
 iluminacion.castShadow = true;
 
 document.body.appendChild( renderizador.domElement );
+}
+
+function loop(){
+requestAnimationFrame(loop);
+
 renderizador.render( escena, camara );
+}
+
+setup();
+loop();
