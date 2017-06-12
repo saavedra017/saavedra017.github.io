@@ -36,22 +36,22 @@ var forma = new THREE.LatheGeometry(puntos);
 
 //var material = new THREE.MeshNormalMaterial();
 
-var malla = new THREE.Mesh( forma, material );
+malla = new THREE.Mesh( forma, material );
 malla.scale.set(0.1,0.1,0.1);
 malla.rotateX( Math.PI/6 );
 malla.rotateY( Math.PI/6 );
 
-var escena = new THREE.Scene();
+escena = new THREE.Scene();
 escena.add(malla);
 escena.add(base);
 escena.add(iluminacion);
 
-var camara = new THREE.PerspectiveCamera();
+camara = new THREE.PerspectiveCamera();
 camara.position.y = 10;
 camara.position.z = 60;
 
 var lienzo = document.getElementById("luzPuntual");
-var renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
+renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
 renderizador.setSize(600, 600);
 renderizador.shadowMapEnabled = true;
 malla.castShadow = true;
@@ -66,6 +66,8 @@ requestAnimationFrame(loop);
 
 renderizador.render( escena, camara );
 }
+
+var camara, escena, renderizador, malla;
 
 setup();
 loop();
