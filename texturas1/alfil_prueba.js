@@ -34,7 +34,7 @@ loader.load(
 	function ( xhr ){ console.log( (xhr.loaded/xhr.total * 100) + '% cargado' ); },
 
 	// función cuando la descarga falla
-	function ( xhr ) { console.log('fallo la descarga'); var material = new THREE.MeshNormalMaterial(); }
+	function ( xhr ) { var material = new THREE.MeshNormalMaterial(); console.log('fallo la descarga'); }
 	);   
 
 var malla = new THREE.Mesh( forma, material );
