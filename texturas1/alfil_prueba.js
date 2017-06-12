@@ -1,3 +1,19 @@
+var loader = new THREE.TextureLoader();
+
+loader.load(
+	'https://saavedra017.github.io/texturas1/MN.jpg',  
+
+	// función cuando la textura está cargada
+	function( texture ) { var  material = new THREE.MeshBasicMaterial( { map: texture } ); },
+
+	// función cuando la descarga de a textura está en progreso
+	function ( xhr ){ console.log( (xhr.loaded/xhr.total * 100) + '% cargado' ); },
+
+	// función cuando la descarga falla
+	function ( xhr ) { var material = new THREE.MeshNormalMaterial(); console.log('fallo la descarga'); }
+	);   
+
+
 var puntos = [];
 
 for ( var i = 0; i < 17; i ++ ) {
@@ -19,21 +35,6 @@ for ( var i = 0; i < 32; i ++ ) {
 
 
 var forma = new THREE.LatheGeometry(puntos);
-
-var loader = new THREE.TextureLoader();
-
-loader.load(
-	'saavedra017.github.io/texturas1/MN.jpg',  
-
-	// función cuando la textura está cargada
-	function( texture ) { var  material = new THREE.MeshBasicMaterial( { map: texture } ); },
-
-	// función cuando la descarga de a textura está en progreso
-	function ( xhr ){ console.log( (xhr.loaded/xhr.total * 100) + '% cargado' ); },
-
-	// función cuando la descarga falla
-	function ( xhr ) { var material = new THREE.MeshNormalMaterial(); console.log('fallo la descarga'); }
-	);   
 
 var malla = new THREE.Mesh( forma, material );
 malla.rotateX( Math.PI/6 );
