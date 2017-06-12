@@ -20,12 +20,10 @@ for ( var i = 0; i < 32; i ++ ) {
 
 var forma = new THREE.LatheGeometry(puntos);
 
-// var material = new THREE.MeshNormalMaterial();
-
 var loader = new THREE.TextureLoader();
 
 loader.load(
-	'saavedra017.github.io/texturas1/MPN.jpg',  
+	'saavedra017.github.io/texturas1/MN.jpg',  
 
 	// función cuando la textura está cargada
 	function( texture ) { var  material = new THREE.MeshBasicMaterial( { map: texture } ); },
