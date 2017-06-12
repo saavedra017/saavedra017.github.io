@@ -14,16 +14,16 @@ loader.load(
 	);   */
 
 THREE.ImageUtils.crossOrigin='';
-var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MPN.jpg');
-var material = new THREE.MeshLambertMaterial({map:textura});
+var textura =THREE.ImageUtils.loadTexture('https://saavedra017.github.io/texturas1/MPB.jpg');
+var material = new THREE.MeshBasicMaterial({map:textura});
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 50;
-iluminacion.position.z = 50;
+iluminacion.position.z = 25;
 
 var base = new THREE.Mesh( new THREE.BoxGeometry(20, 0.1, 20), 
 			   new THREE. MeshBasicMaterial({color: 0xFFFFFF}) );
-base.position.y=0;
+base.position.y=-5;
 base.rotateX( Math.PI/6 );
 
 
@@ -62,7 +62,7 @@ escena.add(iluminacion);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.y = 10;
-camara.position.z = 50;
+camara.position.z = 60;
 
 var lienzo = document.getElementById("luzPuntual");
 var renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
